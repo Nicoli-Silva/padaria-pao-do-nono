@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pão do Nono — Padaria Artesanal</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;600;700&family=Anton&family=Playwrite+US+Trad:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome (ícones redes sociais / carrinho) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div class="site">
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="topo" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="#topo" aria-label="Padaria Pão do Nono - Início">
+        <img src="assets/img/Logo_lado.png" alt="Padaria Pão do Nono" class="brand__logo"/>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul id="menu" class="nav__list">
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#horario">Horário</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+        </ul>
+      </nav>
+
+      <!-- Carrinho (ícone) -->
+      <button id="cartBtn" class="cart-btn" aria-label="Abrir carrinho">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+
+      <!-- Busca -->
+      <form class="search" role="search" aria-label="Pesquisar produtos">
+        <input id="q" name="q" type="search" placeholder="Pesquise aqui..." />
+        <button class="btn btn--sm" type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- ================ CONTEÚDO PRINCIPAL================ -->
+  <div class="main-wrapper" style="background:#fff;color:#1e1e1e;margin:40px auto;padding:40px;border-radius:16px;max-width:1200px;box-shadow:0 4px 20px rgba(0,0,0,.1);">
+    <main class="main" role="main">
+      <!-- ============== HERO ============== -->
+      <section class="hero" aria-label="Destaque">
+        <div class="container hero__grid">
+          <!-- Carrossel -->
+          <div class="carousel" data-carousel>
+            <button class="carousel__prev" data-prev>‹</button>
+            <div class="carousel__track" data-track>
+              <div class="carousel__slide is-active">
+                <img src="assets/img/paes2.png" alt="Pães artesanais no forno">
+              </div>
+              <div class="carousel__slide">
+                <img src="assets/img/paes-carrossel2.png" alt="Doces e confeitaria">
+              </div>
+              <div class="carousel__slide">
+                <img src="assets/img/paes-carrossel.png" alt="Mesa com produtos">
+              </div>
+            </div>
+            <button class="carousel__next" data-next>›</button>
+            <div class="carousel__dots" data-dots></div>
+          </div>
+
+          <!-- Texto + imagem da loja virtual -->
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1 class="hero__title">
+                <span class="hero__kicker">CONHEÇA NOSSA</span>
+                <span class="hero__main">LOJA VIRTUAL</span>
+              </h1>
+
+              <p class="hero__meta">+ de <strong>20</strong> tipos de produtos</p>
+              <p class="hero__script">
+                <span class="hero__bullet">•</span>
+                <em>feito com muito amor para você</em>
+              </p>
+
+              <a href="#produtos" class="btn btn--lg">Ver produtos</a>
+            </div>
+
+            <div class="hero__image">
+              <img src="assets/img/note-sem-fundo.png" alt="Loja virtual Pão do Nono">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== PRODUTOS ============== -->
+      <section id="produtos" class="section products" aria-labelledby="titulo-produtos">
+        <div class="container">
+          <h2 id="titulo-produtos" class="section__title">Produtos</h2>
+
+          <div class="products__grid">
+            <!-- Card 1 -->
+            <article class="card">
+              <img src="assets/img/cueca_virada.png" alt="Cueca virada"/>
+              <div class="card__body">
+                <h3 class="card__title">Cueca Virada</h3>
+                <p class="card__text">Pacote 500g — R$ 10,00</p>
+                <button class="btn btn--carrinho" data-product="Cueca Virada" data-price="10.00">Adicionar ao carrinho</button>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+              <img src="assets/img/sonhos_1024.png" alt="Sonho recheado"/>
+              <div class="card__body">
+                <h3 class="card__title">Sonho</h3>
+                <p class="card__text">Bandeja com 8 un. — R$ 12,00</p>
+                <button class="btn btn--carrinho" data-product="Sonho" data-price="12.00">Adicionar ao carrinho</button>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+              <img src="assets/img/donuts.png" alt="Donuts recheados"/>
+              <div class="card__body">
+                <h3 class="card__title">Donuts Recheados</h3>
+                <p class="card__text">1 unidade — R$ 8,00</p>
+                <button class="btn btn--carrinho" data-product="Donuts Recheados" data-price="8.00">Adicionar ao carrinho</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== DELIVERY ============== -->
+      <section id="delivery" class="section cta" aria-label="Delivery pelo WhatsApp">
+        <div class="container cta__inner" style="text-align:center;">
+          <h2 class="section__title">Peça pelo WhatsApp</h2>
+          <a class="btn btn--whats" href="https://wa.me/5543984363756" target="_blank" rel="noopener">Fazer Pedido</a>
+        </div>
+      </section>
+
+      <!-- ============== SOBRE NÓS ============== -->
+      <section id="sobre" class="section about" aria-labelledby="titulo-sobre">
+        <div class="container">
+          <img src="assets/img/mae_de_fake.png" alt="Victor e Marcia" class="about__img" />
+
+          <h2 id="titulo-sobre" class="section__title">Nossa História</h2>
+          <p>Oi!! Sou o Victor e vou contar um pouquinho da nossa história pra vocês!</p>
+
+          <p>A nossa padaria nasceu de um sonho — um sonho que começou há muitos anos, quando a Dona Marcia fazia e vendia sonhos (sim, aquele pãozinho doce recheado!) para cuidar de mim e dos meus irmãos com muito amor.</p>
+
+          <p>Com o tempo, o amor pelo forno e o cheirinho de pão quentinho foi crescendo junto com a vontade de transformar esse talento em algo maior. Depois de sair do meu emprego, decidi abrir uma padaria ao lado da nossa mãe, unindo o carinho das receitas de família à vontade de construir algo próprio.</p>
+
+          <p>Hoje, preparamos cada pão, bolo e doce com o mesmo cuidado e sabor que sempre fizeram parte da nossa história. Aqui, tudo é feito com muito amor, simplicidade e verdade — porque acreditamos que o segredo de um bom pão está não só na massa, mas em quem o faz.</p>
+
+          <p>Seja bem-vindo à nossa padaria. Aqui, cada fornada é um pedacinho do nosso sonho ❤️</p>
+        </div>
+      </section>
+
+      <!-- ============== HORÁRIO ============== -->
+      <section id="horario" class="section hours" aria-labelledby="titulo-horarios">
+      
+        <div class="hours__bg" style="background-image: url('assets/img/horario-banner.jpg');">
+          <div class="hours__content container">
+            <h2 id="titulo-horarios" class="section__title">HORÁRIO DE FUNCIONAMENTO</h2>
+            <ul class="hours__list">
+              <li><strong>Segunda a sábado:</strong> 06:30 – 18:00</li>
+              <li><strong>Domingos e feriados:</strong> 07:00 – 13:00</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== CONTATO / LOCALIZAÇÃO ============== -->
+      <section id="contato" class="section contact" aria-labelledby="titulo-contato">
+        <div class="container contact__grid">
+          <div>
+            <h2 id="titulo-contato" class="section__title">Contato e Localização</h2>
+            <address class="contact__info">
+              <p><strong>Endereço:</strong> Rua Ana Murge, 360 – Maria Cecília – Londrina/PR</p>
+              <p><strong>Telefones:</strong> (43) 98436-3756 • (43) 98487-1345</p>
+              <p><strong>E-mail:</strong> <a href="mailto:contato@paodonono.com.br">contato@paodonono.com.br</a></p>
+            </address>
+          </div>
+
+          <form class="form" aria-label="Receba nossas novidades por WhatsApp">
+            <label for="whats" class="form__label">Receba nossas novidades por WhatsApp:</label>
+            <div class="form__row">
+              <input id="whats" type="tel" placeholder="Seu número com DDD" />
+              <button class="btn" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="social">
+          <a href="https://instagram.com/pao.do.nono" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5543984871345" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p>© Feito com 💜 por <a href="https://www.linkedin.com/in/nicoli-silva/" target="_blank">Nicoli Silva</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- ========= GAVETA DO CARRINHO ========= -->
+<div id="cartOverlay" class="cart-overlay" hidden></div>
+<aside id="cart" class="cart" aria-hidden="true">
+  <header class="cart__header">
+    <h3>Seu pedido</h3>
+    <button id="cartClose" class="cart__close" aria-label="Fechar">✖</button>
+  </header>
+
+  <ul id="cartList" class="cart__list"></ul>
+
+  <div class="cart__footer">
+    <div class="cart__total">
+      Total: <strong>R$ <span id="cartTotal">0,00</span></strong>
+    </div>
+    <button id="cartClear" class="btn btn--sm">Limpar</button>
+    <button id="cartCheckout" class="btn btn--pedido">Finalizar no WhatsApp</button>
+  </div>
+</aside>
+
+
+<script src="assets/js/script.js"></script>
+
+<!-- Nav mobile mínimo  -->
+<script>
+  const btn = document.querySelector('.nav__toggle');
+  const menu = document.getElementById('menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('nav__list--open');
+    });
+  }
+</script>
+</body>
+</html>
